@@ -1,0 +1,4 @@
+FROM amazoncorretto:11-al2-jdk
+
+COPY build/libs/CodeGenerationIssue*.jar app.jar
+CMD ["java", "-jar", "app.jar"]
