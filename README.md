@@ -2,7 +2,7 @@
 
 This repo is a reproduction of an issue asked in [stackoverflow](https://stackoverflow.com/questions/70124385/spring-boot-fails-to-start-up-could-not-generate-cglib-subclass-of-class-basice?noredirect=1#comment123960530_70124385)
 
-**Issue**: The Spring Boot application fails to start up after moving for JDK11 to JDK17 due to `AopConfigException: attempted duplicate class definition`
+**Issue**: The Spring Boot application fails to start up after moving from JDK11 to JDK17 due to `AopConfigException: attempted duplicate class definition`
 
 ### How to reproduce with JDK 17
 
@@ -13,10 +13,9 @@ Run the script `test_with_jdk17.sh` This will:
 3. Run the docker container and issue is present
 
 
-
 ### How to NOT reproduce with JDK11
 
-Run the script `test_with_jdk11sh` This will:
+Run the script `test_with_jdk11.sh` This will:
 
 1. Build the jar file using gradle
 2. Build the docker image using as `amazoncorretto:11-al2-jdk` as base image and copy the jar to the image
